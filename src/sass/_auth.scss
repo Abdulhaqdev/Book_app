@@ -1,0 +1,39 @@
+.auth-container {
+    background-color: #fff;
+    padding: 60px 0;
+}
+.auth-inner {
+    display: flex;
+    gap: 180px;
+    align-items: center;
+    padding: 0 30px;
+}
+.auth-title {
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    
+}
+.auth-dec {
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+}
+.auth-form {
+    flex-grow: 1;
+}
+.auth-form-cantrol {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    align-items: baseline;
+    max-width: 330px;
+    width: 100%;
+    input ,button{
+        width: 100%;
+    }
+}

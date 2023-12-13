@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import AuthRoutes from "../components/route/AuthRoutes";
 import ProtectedRoutes from "../components/route/ProtectedRoutes";
 import { authRoute, protedRoutes } from "../config/routes";
 import AppRoute from "../components/route/AppRoute";
-import CheckAuth from "../components/CheckAuth";
+import CheckAuth from "../components/route/CheckAuth";
 import { useSelector } from "react-redux";
 
 function AllPages() {
@@ -12,7 +12,7 @@ function AllPages() {
   const { role } = useSelector((state) => state.user);
 
   return (
-    <div>
+    <Suspense fallback={<p>loding..</p>}>
       <Routes>
         <Route
           path="/"
@@ -41,7 +41,7 @@ function AllPages() {
         </Route>
         <Route path="/*" element={"page not found"} />
       </Routes>
-    </div>
+    </Suspense>
   );
 }
 
